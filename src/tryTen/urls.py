@@ -16,10 +16,11 @@ Including another URLconf
 
 from django.conf import settings
 from django.conf.urls.static import static
-from django.conf.urls import url
+from django.conf.urls import url, include
 from django.contrib import admin
 from profiles import views as profileViews
 from contact import views as contactViews
+from checkout import views as checkout_views
 
 urlpatterns = [
     # admin url
@@ -28,9 +29,16 @@ urlpatterns = [
     # for profile app
     url(r'^$', profileViews.home, name='home'),
     url(r'^about/$', profileViews.about, name='about'),
+    url(r'^profile', profileViews.userProfile, name='profile'),
 
     # for contact app
     url(r'^contact/$', contactViews.contact, name='contact'),
+
+    # for checkout app
+    url(r'^checkout', checkout_views.checkout, name='checkout'),
+
+    # For allauth app
+    url(r'^accounts/', include('allauth.urls')),
 ]
 
 # if settings.DEBUG:

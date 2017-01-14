@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %} User Profile | django {% endblock %}
+
+{% block content %}
+    {{ user.username }}<br>
+    {{ user.email }}
+{% endblock %}

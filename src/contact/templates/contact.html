@@ -6,15 +6,23 @@
 {% endblock %}
 
 {% block content %}
-    <form class="form-horizontal">
-        {% csrf_token %}
-        {{ form|crispy }}
-        <div class="form-group">
-            <div class="col-md-6">
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <h2 class="text-center">{{ title }}</h2>
+
+            {% if confirm_messege %}
+                <p>{{ confirm_messege }}</p>
+            {% endif %}
+
+            {% if form %}
+                <form method="POST" action="">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <input type="submit" value="Submit Form" class="btn btn-default">
+                </form>
+            {% endif %}
         </div>
-    </form>
+    </div>
 {% endblock %}
 
 
