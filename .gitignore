@@ -1,4 +1,3 @@
-*.pyc
 manage.py
 #django file
 *.pyc
@@ -96,4 +95,3 @@ share
 local
 tryTen.sublime-project
 tryTen.sublime-workspace
-static
