@@ -15,7 +15,7 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-EMAIL_HIST = 'smtp.gmail.com'
+EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'rocky.cse09@gmail.com'
 EMAIL_HOST_PASSWORD = 'rosh@1996#'
 EMAIL_PORT = '587'
